@@ -1,0 +1,17 @@
+---
+- hosts: demohost
+  tasks:
+  - name: create dir
+    file: path=/var/www/html state=directory
+  - name: copy index
+    copy:
+      src: /opt/index.html
+      dest: /var/www/html
+  - name: copy config
+    copy:
+      src: /opt/site-nginx.conf
+      dest: /etc/nginx/conf.d
+  - name: restart nginx
+    service:
+      name=nginx
+      state=reloaded
