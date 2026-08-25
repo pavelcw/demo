@@ -8,3 +8,4 @@ jobs:
       - name: Build docker
         uses: actions/checkout@v3
       - run: ls -la; pwd
+      - run: docker build .
