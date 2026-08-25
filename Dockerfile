@@ -1,4 +1,4 @@
-FROM nginx:1.13.8
+FROM nginx:1.31.4
 ADD index.html /opt
 ADD site-nginx.conf /opt
 ADD play.yml /opt
